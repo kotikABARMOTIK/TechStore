@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена - TechStore</title>
+    <meta name="description" content="Запрашиваемая страница не существует. Вернитесь в интернет-магазин TechStore.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" href="images/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        .error-page {
+            text-align: center;
+            padding: 4rem 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .error-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .error-description {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .error-illustration {
+            font-size: 10rem;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-illustration {
+                font-size: 8rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .error-actions .button {
+                min-width: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 4rem;
+            }
+            
+            .error-illustration {
+                font-size: 6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Пропуск для пользователей скринридеров -->
+    <a href="#main-content" class="skip-link">Перейти к основному содержанию</a>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <span class="logo__icon" aria-hidden="true">🔌</span>
+                <span>TechStore</span>
+            </a>
+
+            <nav class="navigation" aria-label="Основная навигация">
+                <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a href="index.html" class="nav-list__link">Главная</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="index.html#catalog" class="nav-list__link">Каталог</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="index.html#about" class="nav-list__link">О нас</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="index.html#contacts" class="nav-list__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="cart-button" aria-label="Корзина покупок" onclick="location.href='index.html'">
+                <span aria-hidden="true">🛒</span>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="main" id="main-content">
+        <div class="container">
+            <section class="section error-page">
+                <div class="error-content">
+                    <div class="error-illustration" aria-hidden="true">🔍</div>
+                    <h1 class="error-code">404</h1>
+                    <h2 class="error-title">Страница не найдена</h2>
+                    <p class="error-description">
+                        К сожалению, запрашиваемая вами страница не существует. 
+                        Возможно, она была перемещена или удалена. 
+                        Вернитесь на главную страницу или воспользуйтесь поиском, чтобы найти нужный товар.
+                    </p>
+                    
+                    <div class="error-actions">
+                        <a href="index.html" class="button button--primary">
+                            На главную страницу
+                        </a>
+                        <a href="index.html#catalog" class="button button--secondary">
+                            Перейти в каталог
+                        </a>
+                        <button onclick="history.back()" class="button button--secondary">
+                            Вернуться назад
+                        </button>
+                    </div>
+                    
+                    <div class="error-help" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0e0e0;">
+                        <h3 style="margin-bottom: 1rem;">Нужна помощь?</h3>
+                        <p style="margin-bottom: 1.5rem;">Если вы не можете найти нужную информацию, свяжитесь с нашей службой поддержки:</p>
+                        <div class="contact-info" style="font-size: 1rem;">
+                            <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                            <p><strong>Email:</strong> support@techstore.ru</p>
+                            <p><strong>Режим работы:</strong> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__section">
+                    <h3 class="footer__section-title">TechStore</h3>
+                    <p>Лучший выбор техники по доступным ценам</p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__section-title">Категории</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html#catalog" class="footer__link">Смартфоны</a></li>
+                        <li><a href="index.html#catalog" class="footer__link">Ноутбуки</a></li>
+                        <li><a href="index.html#catalog" class="footer__link">Телевизоры</a></li>
+                        <li><a href="index.html#catalog" class="footer__link">Аудиотехника</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__section-title">Помощь</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html#contacts" class="footer__link">Доставка и оплата</a></li>
+                        <li><a href="index.html#contacts" class="footer__link">Гарантия</a></li>
+                        <li><a href="index.html#contacts" class="footer__link">Возврат товара</a></li>
+                        <li><a href="index.html#contacts" class="footer__link">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__section-title">Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="social-link" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2023 TechStore. Все права защищены.</p>
+                <p>Сайт соответствует требованиям ГОСТ Р 56939-2016</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript для базовой функциональности -->
+    <script>
+        // Базовая инициализация для страницы 404
+        document.addEventListener('DOMContentLoaded', function() {
+            // Обновляем счетчик корзины если есть данные в localStorage
+            try {
+                const cartData = localStorage.getItem('techstore_cart');
+                if (cartData) {
+                    const cartItems = JSON.parse(cartData);
+                    const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+                    const cartCount = document.querySelector('.cart-count');
+                    if (cartCount) {
+                        cartCount.textContent = totalItems;
+                    }
+                }
+            } catch (error) {
+                console.log('Не удалось загрузить данные корзины');
+            }
+
+            // Добавляем обработчик для поиска
+            const searchForm = document.querySelector('.search-form');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const searchInput = document.getElementById('search-input');
+                    if (searchInput && searchInput.value.trim()) {
+                        // Сохраняем поисковый запрос и переходим на главную
+                        sessionStorage.setItem('searchQuery', searchInput.value.trim());
+                        window.location.href = 'index.html';
+                    }
+                });
+            }
+
+            // Логирование ошибки 404 для аналитики
+            console.log('Страница 404: Пользователь попал на несуществующую страницу -', window.location.href);
+        });
+
+        // Функция для поиска на главной странице
+        function searchOnHomePage(query) {
+            sessionStorage.setItem('searchQuery', query);
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
